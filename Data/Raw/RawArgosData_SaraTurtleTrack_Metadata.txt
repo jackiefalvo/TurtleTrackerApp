@@ -1,0 +1,5 @@
+Turtle tracking data pulled from - https://raw.githubusercontent.com/ENV859/TurtleTest/master/Sara.txt
+
+Pulled September 16, 2020
+Cristiana Falvo
+cristiana.falvo@duke.edu
