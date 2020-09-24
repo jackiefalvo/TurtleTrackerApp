@@ -9,8 +9,20 @@
 # Date:   Fall 2020
 #--------------------------------------------------------------
 
+# create variable pointing to data file
+file_name = './Data/Raw/RawArgosData_SaraTurtleTrack.txt'
+
+# create a file object from the file
+file_object = open(file_name, 'r')
+
+# read contents of file into a list
+line_list = file_object.readlines()
+
+# close the file (we have our list now)
+file_object.close()
+
 # sample line
-lineString = '20616	29051	7/3/2003 9:13	3	66	33.898	-77.958	27.369	-46.309	6	0	-126	529	3	401 651134.7	0'
+lineString = line_list[100]
 
 # split string into data items
 lineData = lineString.split()
@@ -27,3 +39,4 @@ obs_lon = lineData[7]
     
 # print sara's location
 print(f"Record {record_ID} indicates Sara was seen at {obs_lat}N,{obs_lon}W on {obs_date}")
+
