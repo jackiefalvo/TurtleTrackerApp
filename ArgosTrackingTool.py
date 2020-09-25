@@ -1,5 +1,5 @@
 #-------------------------------------------------------------
-# ARGOSTrackingTool.py
+# ARGOSTrackingTool.py -- single line
 #
 # Description: Reads in an ARGOS tracking data file and allows
 #   the user to view the location of the turtle for a specified
