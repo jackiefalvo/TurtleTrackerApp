@@ -17,19 +17,16 @@ raw_data = open(raw_file, 'r')
 data = raw_data.readlines()
 print(data[17])
 
-# iterate through lines
+# iterate through lines -- using operator
 # for line in data:
   #  if line[0] == '#'or line[0] == 'u': #if first character in line is a # or uid
    #     continue # skip
-        
+     
+# iterating through lines -- using tuples   
 for line in data:
     if line[0] in ('#', 'u'): # if the line's first character is in this tuple
         continue # then skip it
-    
-    
-print(data[17])
-
-
+        
 # split string into data items
 split_data = data.split()
 
