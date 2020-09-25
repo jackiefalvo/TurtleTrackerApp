@@ -27,14 +27,17 @@ for line in data:
     if line[0] in ('#', 'u'): # if the line's first character is in this tuple
         continue # then skip it
         
-# split string into data items
-split_data = data.split()
+    # split string into data items
+    lineData = line.split()
+    
+    # extract items in list into variables
+    record_ID = lineData[0]
+    obs_date = lineData[2]
+    obs_lc = lineData[4]
+    obs_lat = lineData[6]
+    obs_lon = lineData[7]
 
-# extract items in list into variables
-record_ID = lineData[0]
-obs_date = lineData[2]
-obs_lc = lineData[4]
-obs_lat = lineData[6]
-obs_lon = lineData[7]
-
+# it works at this point but each variable item above (recordID, etc) is overwritten
+    # so each variable has the value of the last line right now
+    
 
