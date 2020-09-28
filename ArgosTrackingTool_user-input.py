@@ -85,7 +85,7 @@ print("count =", count)
 #%% back to video flow..using user input to search dict
 
 # Ask user to enter search date
-search_date = input("enter date to search for sara: ")
+search_date = input("enter date to search for sara [M/D/YYYY] : ")
 
 # read in data
 raw_file = './Data/Raw/RawArgosData_SaraTurtleTrack.txt'
@@ -137,6 +137,10 @@ for date_item in date_dict.items():
     the_uid, the_date = date_item # separates two parts, names them
     if the_date == search_date:
         keys_of_interest.append(the_uid) # list of keys associated w/ user date
+    
+# inform the user if no records were found
+if len(keys_of_interest) == 0:
+    print(f"No observations on {search_date}")
         
 # spits out the key(s) that are associated w/ the user inputted date
 #print(keys_of_interest, len(keys_of_interest), "keys found") 
